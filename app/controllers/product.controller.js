@@ -1,13 +1,13 @@
-import Product from "@/models/product"
+const Product = require('models/product')
 
 class ProductController
 {
     constructor()
     {
-        this.teste = 'OI'
-        console.log(this.teste)
+        console.log("PRODUCT CONTROLLER INICIADO")
     }
 
-    
 
 }
+
+module.exports = ProductController

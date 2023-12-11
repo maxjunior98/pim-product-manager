@@ -1,6 +1,19 @@
 {   
     "compilerOptions": {
-        "baseUrl": "app"
+        "baseUrl": ".",
+        "paths": {
+            "@router/*": [
+                "app/router/*"
+            ],
+            "@modules/*": [
+                "./modules/*"
+            ]
+        }
     },
-    "include": ["app"]
+    "include": [
+        "app"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
 }

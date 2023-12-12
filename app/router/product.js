@@ -31,4 +31,6 @@ router.post('/new', async (req, res) => {
     res.status(201).send('INSERT NEW PRODUCT')
 })
 
+
+
 module.exports = router

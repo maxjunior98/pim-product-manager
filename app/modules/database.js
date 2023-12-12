@@ -11,6 +11,7 @@ function execute(query, values)
 {
     try {
         const result = pool.query(query, values)
+        console.log(result)
         return result
     } 
     catch (e) {

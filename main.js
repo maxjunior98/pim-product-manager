@@ -1,13 +1,14 @@
 require("dotenv").config()
 const express = require("express")
-const product = require("./app/router/product")
+const routers = require("./app/router/router")
 
 const port = process.env.PORT
 const app = express()
 
 app.use(express.json())
 
-app.use('/product', product)
+app.use('/product', routers.productsRouter)
+// app.use('/usuarios', routers.productsRouter)
 
 app.listen(port)
 console.log(`Serviço rodando na porta ${port}`)

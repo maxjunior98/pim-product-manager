@@ -1,0 +1,28 @@
+{
+    "tables": [
+        {
+            "products": {
+                "PID": "SERIAL PRIMARY KEY",
+                "FK_STORE": "INT",
+                "TITLE": "VARCHAR(128)",
+                "DESCRIPTION": "VARCHAR(256)",
+                "PRICE": "NUMBER(16,2)"
+            }
+        },
+        {
+            "user": {
+
+            }
+        },
+        {
+            "store": {
+
+            }
+        },
+        {
+            "employee": {
+
+            }
+        }
+    ]
+}

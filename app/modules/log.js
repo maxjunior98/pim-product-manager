@@ -1,7 +1,6 @@
 function logTime(str = '') {
     const date = new Date()
-    console.log(date)
-    console.log(`HTTP REQUEST TO: ${str}` )
+    console.log(`HTTP REQUEST TO: ${str} ON ${date}` )
 }
 
 module.exports = logTime

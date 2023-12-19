@@ -1,9 +1,11 @@
 class Store {
     constructor() {
-        this.structure = {
-            table: 'STORE',
-            columns: ['CODE','NAME'],
-            key: 'CODE'
-        }
+        this.table = 'STORE'
+        this.columns = ['NAME']
+        this.key = 'CODE'
+    }
+
+    getColumns() {
+        return '(NAME)'
     }
 }

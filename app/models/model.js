@@ -21,4 +21,8 @@ class BuiderModel {
             }
         }
     }
+
+    getQuery() {
+        const query = ``
+    }
 }

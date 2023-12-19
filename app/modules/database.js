@@ -7,11 +7,11 @@ const pool = new Pool({
     port: process.env.DB_PORT,
 })
 
-function execute(query, values)
+async function execute(query, values)
 {
     try {
-        const result = pool.query(query, values)
-        console.log(result)
+        const result = await pool.query(query, values)
+        // console.log(result)
         return result
     } 
     catch (e) {

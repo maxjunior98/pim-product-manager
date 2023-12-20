@@ -21,6 +21,15 @@ class BuilderRouter
             return result
         })
 
+        this.router.get('/getBy', async(req, res) => {
+            logTime(`${this.model.table} GET BY COLUMNS`)
+            const { column, value } = req.query
+            const query = `SELECT * FROM ${this.model.table} WHERE ${column} = $1`
+            const result = await execute(query, [value])
+            res.status(200).send(result.rows)
+            return result
+        })
+
         this.router.post('/create', async(req, res) => {
             logTime(`${this.model.table} CREATE`)
             const body = req.body
@@ -33,9 +42,9 @@ class BuilderRouter
 
         this.router.put('/update', async(req, res) => {
             logTime(`${this.model.table} UPDATE`)
-            const { column, value } = req.query
-            const query = `UPDATE ${this.model.table} SET ${column} = $1`
-            const result = await execute(query, [value])
+            const { column, value, key } = req.query
+            const query = `UPDATE ${this.model.table} SET ${column} = $1 WHERE ${this.model.key.name} = $2`
+            const result = await execute(query, [value, key])
             res.status(200).send(`UPDATE ON ${this.model.table}`)
             return result
         })
